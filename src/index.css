@@ -1,0 +1,157 @@
+.background-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #ccc; /* Fallback color */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.background-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/windowsxpwall.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+    z-index: -1; 
+}
+
+.windows-footer {
+    display: flex;
+    justify-content: space-between; /* Ensures clock is on the right */
+    align-items: center; /* Vertically centers items */
+    background-color: #245DDA; /* Windows XP blue color */
+    padding: 0 10px; /* Adjust padding if needed */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px; /* Increase height for better appearance */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+    font-family: "Tahoma", sans-serif;
+    z-index: 1000;
+    left: -10px; /* Adjust if necessary */
+}
+
+
+.windows-start-image {
+    height: 100%; /* Makes the image take up the full height of the footer */
+    width: auto; /* Adjusts width to maintain aspect ratio */
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    left: 0px;
+}
+
+.icon-container{
+    padding:14px;
+    left: 15px;
+    width: 4%;
+    position: relative;
+}
+
+.icon-image{
+    width: 64px; /* Adjust size as needed */
+    height: 64px; /* Adjust size as needed */
+    cursor: pointer;
+}
+
+.icon-header{
+    font-size: 16px;
+    margin-top: 0px;
+    color: white;
+    font-family: "Tahoma", sans-serif;
+    position: relative;
+    cursor: default;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #e4e4e4;
+    border: 2px solid #b4b4b4;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    font-family: "Tahoma", sans-serif;
+    position: relative;
+}
+
+.popup-title-bar {
+    background: linear-gradient(to right, #0056b3, #66a3ff);
+    padding: 8px;
+    border-bottom: 2px solid #b4b4b4;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.popup-title {
+    font-size: 14px;
+}
+
+.popup-close-button {
+    background-color: red;
+    border: 1px solid #b4b4b4;
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: inset 1px 1px 0px white, inset -1px -1px 0px #b4b4b4;
+    font-size: 12px;
+    color: white; /* White X on hover */
+}
+
+.popup-close-button:hover {
+    color: white; /* White X on hover */
+    background-color: rgb(236, 83, 83); /* Red background on hover */
+}
+
+.popup-body {
+    padding: 15px;
+    color: black;
+}
+
+.popup-body p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.windows-clock {
+    background-color: rgb(37, 153, 246); /* Light gray background typical of Windows XP */
+    color: white; /* Black text */
+    padding: 0px 8px; /* Slightly more padding for better appearance */
+    font-size: 12px; /* Adjust font size if needed */
+    border-radius: 2px; /* Rounded corners */
+    text-align: right;
+    font-weight: bold; 
+    font-family: "Tahoma", sans-serif;
+    display: flex;
+    align-items: center;
+    height:100%;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+}
